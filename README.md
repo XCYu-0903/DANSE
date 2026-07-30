@@ -1,8 +1,31 @@
-# DANSE
-**Xincheng Yu, ...**
+<div align="center">
+  <h1>DANSE</h1>
 
-DANSE is pronounced as ‘dance’ (/dɑːns/)
+  <img src="assets/LOGO.png" width="300" alt="DANSE logo">
 
-Some audio examples can be found [here](https://xcyu-0903.github.io/DANSE-demo/).
+  <p>
+    <strong>Xincheng Yu, Jingxue Huang, Jian Zhang, Dongyue Guo, Jianwei Zhang, and Yi Lin*</strong>
+  </p>
 
-Our proposed Libri-AudioEvent dataset can be found [here](https://huggingface.co/datasets/Ediethia/Libri-AudioEvent).
+  <p>
+    <a href="#"><img src="https://img.shields.io/badge/Paper-coming_soon-blue?style=for-the-badge" alt="Paper"></a>
+    <a href="https://xcyu-0903.github.io/DANSE-demo/"><img src="https://img.shields.io/badge/Demo-online-green?style=for-the-badge" alt="Demo"></a>
+    <a href="https://huggingface.co/datasets/Ediethia/Libri-AudioEvent"><img src="https://img.shields.io/badge/Dataset-Libri--AudioEvent-orange?style=for-the-badge" alt="Dataset"></a>
+  </p>
+
+  <p><strong>DANSE</strong> is pronounced as <em>‘dance’</em> (/dɑːns/).</p>
+</div>
+
+## Architecture
+
+<div align="center">
+  <img src="assets/DANSE.png" width="900" alt="DANSE architecture">
+</div>
+
+## Contact Us
+
+If you are interested in leaving a message to our research team, feel free to email xinchengyu@alu.scu.edu.cn.
+
+<div align="center">
+  <img src="assets/wiseatc_logo.png" width="260" alt="WiseATC logo">
+</div>
