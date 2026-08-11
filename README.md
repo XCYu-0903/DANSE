@@ -28,7 +28,7 @@
 If you are interested in leaving a message to our research team, feel free to email xinchengyu@alu.scu.edu.cn.
 
 <div align="center">
-  <img src="assets/scu_logo.png" height="90" alt="SCU logo">
+  <img src="assets/scu_logo.png" height="120" alt="SCU logo">
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/wiseatc_logo.png" height="90" alt="WiseATC logo">
+  <img src="assets/wiseatc_logo.png" height="120" alt="WiseATC logo">
 </div>
