@@ -1,7 +1,7 @@
 <div align="center">
   <h1>DANSE</h1>
 
-  <img src="assets/LOGO.png" width="300" alt="DANSE logo">
+  <img src="assets/LOGO.png" width="400" alt="DANSE logo">
 
   <p>
     <strong>Xincheng Yu, Jingxue Huang, Jian Zhang, Dongyue Guo, Jianwei Zhang, and Yi Lin*</strong>
@@ -22,10 +22,13 @@
   <img src="assets/DANSE.png" width="900" alt="DANSE architecture">
 </div>
 
+
 ## Contact Us
 
 If you are interested in leaving a message to our research team, feel free to email xinchengyu@alu.scu.edu.cn.
 
 <div align="center">
-  <img src="assets/wiseatc_logo.png" width="260" alt="WiseATC logo">
+  <img src="assets/scu_logo.png" height="90" alt="SCU logo">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/wiseatc_logo.png" height="90" alt="WiseATC logo">
 </div>
