@@ -1,0 +1,44 @@
+{
+    "num_gpus": 0,
+    "batch_size": 2,
+    "learning_rate": 0.0005,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "lr_decay": 0.99,
+    "seed": 1234,
+    
+    "dense_channel": 64,
+    "compress_factor": 0.3, 
+    "num_cmtft": 4,
+    "n_head": 8,
+    "beta": 2.0,
+
+    "sampling_rate": 16000,
+    "segment_size": 32000,
+    "n_fft": 400,
+    "hop_size": 100,
+    "win_size": 400,
+
+    "num_workers": 4,
+
+    "clap_sample_rate" : 48000,
+    "embedding_dim" : 1024,
+    "clap_feature_dim" : 512,
+    "k_speech" : 2,
+    "k_noise" : 5,
+    "speech_threshold" : 0.4,
+    "noise_threshold" : 0.4,
+
+
+    "clap_model_path": "/home/yuxincheng/Code_Pretzel/HuggingFaceModels/larger_clap_general",
+    "htsat_model_ckpt": "/home/yuxincheng/Code_Pretzel/PNASE/Stage2-AudioClassification/htsat_official_cp/Other Settings/HTSAT-fullset-imagenet-768d-32000hz.ckpt",
+    "clap_text_embed_path" : "/mnt/data/Datasets/AudioSet/CLAP_text_embeddings/general/CLAP_class_text_embeddings_classname",
+    "class_labels_csv": "/mnt/data/Datasets/AudioSet/metadata/class_labels_indices.csv",
+
+
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "tcp://localhost:54321",
+        "world_size": 1
+    }
+}
