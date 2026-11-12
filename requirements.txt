@@ -1,0 +1,21 @@
+# Versions match the maintained PNASE environment. Any compatible PyTorch 1.x
+# build is supported; install the CUDA variant appropriate for your platform.
+torch==1.10.1
+torchaudio==0.10.1
+numpy==1.23.4
+librosa==0.11.0
+soundfile==0.13.1
+tqdm==4.67.1
+torchlibrosa==0.1.0
+pesq==0.0.4
+joblib==1.5.1
+transformers==4.30.2
+
+# Metrics: DNSMOS and NISQA
+onnxruntime==1.19.2
+pandas==2.3.0
+PyYAML==6.0.2
+scipy==1.10.1
+matplotlib==3.9.4
+scikit-learn==1.6.1
+requests==2.32.4

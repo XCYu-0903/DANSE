@@ -13,7 +13,7 @@ import torch
 import torch.nn.functional as functional
 from tqdm import tqdm
 
-from dataset_dns import mag_pha_istft, mag_pha_stft
+from dataset import mag_pha_istft, mag_pha_stft
 from env import AttrDict
 from models.model import DANSE_Unimodal
 
@@ -34,9 +34,9 @@ def parse_args() -> argparse.Namespace:
         help="Path to one audio file or a directory of audio files.",
     )
     parser.add_argument(
-        "--checkpoint_dir",
-        default="cp/danse_unimodal",
-        help="Directory containing the DANSE checkpoint named g_best.",
+        "--checkpoint",
+        default="cp/danse_unimodal/g_best",
+        help="Generator checkpoint path.",
     )
     parser.add_argument(
         "--output_dir",
@@ -53,8 +53,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--config",
-        default=str(SCRIPT_DIR / "config.json"),
-        help="Model config. Defaults to config.json beside this script.",
+        default="cp/danse_unimodal/danse_m_config.json",
+        help="Model configuration JSON path.",
     )
     parser.add_argument(
         "--device",
@@ -76,10 +76,9 @@ def load_config(config_path: Path) -> AttrDict:
         return AttrDict(json.load(config_file))
 
 
-def load_model(config: AttrDict, checkpoint_dir: Path, device: torch.device) -> DANSE_Unimodal:
-    checkpoint_path = checkpoint_dir / "g_best"
+def load_model(config: AttrDict, checkpoint_path: Path, device: torch.device) -> DANSE_Unimodal:
     if not checkpoint_path.is_file():
-        raise FileNotFoundError(f"DANSE checkpoint not found: {checkpoint_path}")
+        raise FileNotFoundError(f"Generator checkpoint not found: {checkpoint_path}")
 
     checkpoint = torch.load(checkpoint_path, map_location="cpu")
     state_dict = checkpoint.get("generator", checkpoint) if isinstance(checkpoint, dict) else checkpoint
@@ -188,7 +187,7 @@ def write_outputs(outputs: Dict[str, torch.Tensor], output_dir: Path, relative_p
 
 def run_inference(args: argparse.Namespace) -> None:
     input_path = resolve_path(args.input_path)
-    checkpoint_dir = resolve_path(args.checkpoint_dir)
+    checkpoint_path = resolve_path(args.checkpoint)
     output_dir = resolve_path(args.output_dir)
     config = load_config(resolve_path(args.config))
     device = torch.device(args.device)
@@ -199,7 +198,7 @@ def run_inference(args: argparse.Namespace) -> None:
     if device.type == "cuda":
         torch.cuda.manual_seed_all(config.seed)
 
-    model = load_model(config, checkpoint_dir, device)
+    model = load_model(config, checkpoint_path, device)
     audio_files = find_audio_files(input_path)
     print(f"Processing {len(audio_files)} file(s) on {device}.")
 
