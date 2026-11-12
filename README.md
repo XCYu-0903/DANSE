@@ -31,8 +31,6 @@ Create an isolated environment, install a CUDA-enabled PyTorch build appropriate
 ```bash
 conda create -n DANSE python=3.9 -y
 conda activate DANSE
-# The pinned environment uses PyTorch 1.10.1 + CUDA 11.1. Any compatible
-# PyTorch 1.x CUDA build is supported: https://pytorch.org/get-started/locally/
 pip install -r requirements.txt
 ```
 
